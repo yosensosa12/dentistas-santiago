@@ -8,6 +8,27 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'AW-10925658761');
+
+        function gtag_report_conversion(url, openInNewTab) {
+            var callback = function () {
+                if (typeof(url) !== 'undefined') {
+                    if (openInNewTab) {
+                        window.open(url, '_blank', 'noopener');
+                    } else {
+                        window.location = url;
+                    }
+                }
+            };
+
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10925658761/9NF5CLqdtKYcEIml4dko',
+                'value': 1.0,
+                'currency': 'CLP',
+                'event_callback': callback
+            });
+
+            return false;
+        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -848,18 +869,13 @@
             const mensajeCodificado = encodeURIComponent(mensaje);
             const urlWhatsApp = `https://wa.me/56998487444?text=${mensajeCodificado}`;
             
-                // Enviar conversión a Google Ads
-                if (window.gtag) {
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-17990964360/To5GCKCkvqYcEIip4YJD',
-                        'value': 1.0,
-                        'currency': 'CLP'
-                    });
-                }
-
-                // Redirect after a short delay
+                // Enviar conversión a Google Ads y abrir WhatsApp
             setTimeout(() => {
-                window.open(urlWhatsApp, '_blank');
+                if (window.gtag_report_conversion) {
+                    gtag_report_conversion(urlWhatsApp, true);
+                } else {
+                    window.open(urlWhatsApp, '_blank', 'noopener');
+                }
                 loading.classList.remove('active');
                 // Reset form
                 document.getElementById('contactForm').reset();
@@ -910,15 +926,14 @@
 
             whatsappLinks.forEach(function(link) {
                 link.addEventListener('click', function(e) {
-                    // Enviar conversión a Google Ads
-                    if (window.gtag) {
-                        gtag('event', 'conversion', {
-                            'send_to': 'AW-17990964360/To5GCKCkvqYcEIip4YJD',
-                            'value': 1.0,
-                            'currency': 'CLP'
-                        });
+                    e.preventDefault();
+
+                    if (window.gtag_report_conversion) {
+                        gtag_report_conversion(link.href, link.target === '_blank');
+                    } else {
+                        window.open(link.href, '_blank', 'noopener');
                     }
-                    console.log('✅ Conversión de WhatsApp enviada desde INDEX.HTML');
+                    console.log('Conversion de WhatsApp enviada desde INDEX.HTML');
                 });
             });
 
