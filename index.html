@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17990964360"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17990964360');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S y M Clínica Dental - Sonrisas Saludables en Santiago</title>
+    <meta name="description" content="Limpieza dental completa $24.990 | Obturaciones desde $21.990 | Presupuesto GRATIS | Agenda tu hora ahora">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #0A5C74;
+            --color-primary-light: #0D7B96;
+            --color-accent: #2EC4B6;
+            --color-bg: #FAFBFC;
+            --color-white: #FFFFFF;
+            --color-text: #2C3E50;
+            --color-text-light: #5A6C7D;
+            --color-border: #E1E8ED;
+            --color-success: #2EC4B6;
+            --shadow-sm: 0 2px 8px rgba(10, 92, 116, 0.08);
+            --shadow-md: 0 8px 24px rgba(10, 92, 116, 0.12);
+            --shadow-lg: 0 20px 40px rgba(10, 92, 116, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--color-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .phone-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: white;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="600" height="600" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="600" height="600" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 36px;
+            opacity: 0.95;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease-out 0s both;
+        }
+
+        .hero-badge-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .form-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--color-text);
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: 'Outfit', sans-serif;
+            transition: all 0.3s ease;
+            background: var(--color-bg);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(46, 196, 182, 0.1);
+        }
+
+        select.form-control {
+            cursor: pointer;
+            appearance: none;
+            background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%235A6C7D" stroke-width="2" stroke-linecap="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-accent), #25A99D);
+            color: white;
+            box-shadow: 0 4px 16px rgba(46, 196, 182, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(46, 196, 182, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-icon {
+            font-size: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            border-radius: 20px;
+            padding: 36px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-accent);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: var(--color-accent);
+            font-weight: 700;
+            margin: 16px 0;
+        }
+
+        .service-price-label {
+            font-size: 14px;
+            color: var(--color-text-light);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background: var(--color-bg);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--color-accent), #25A99D);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h3 {
+            font-size: 18px;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .benefit-content p {
+            color: var(--color-text-light);
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--color-primary);
+            padding: 16px 40px;
+            width: auto;
+        }
+
+        .btn-white:hover {
+            background: var(--color-bg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-text);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-info a:hover {
+            opacity: 1;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 24px rgba(37, 211, 102, 0.6);
+            }
+        }
+
+        .whatsapp-float svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+            }
+
+            .form-card {
+                padding: 28px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .phone-link {
+                font-size: 16px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-info {
+                justify-content: center;
+            }
+
+            .cta-content h2 {
+                font-size: 32px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-white {
+                width: 100%;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            color: var(--color-accent);
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">✨</div>
+                    S y M Clínica Dental
+                </div>
+                <div class="header-cta">
+                    <a href="tel:+56998487444" class="phone-link">
+                        📞 +56 9 9848 7444
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <div class="hero-badge-icon">✓</div>
+                        Oferta Especial Limitada
+                    </div>
+                    <h1>Tu Sonrisa Perfecta Empieza Aquí</h1>
+                    <p>Tratamientos dentales de calidad con los mejores precios en Santiago. Presupuesto GRATIS sin compromiso.</p>
+                </div>
+                <div class="form-card">
+                    <h2>Agenda tu Cita Ahora</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: María González" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ej: +56 9 1234 5678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (opcional)</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">¿Qué servicio te interesa?</label>
+                            <select id="servicio" name="servicio" class="form-control" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="Limpieza Dental Completa - $24.990">Limpieza Dental Completa - $24.990</option>
+                                <option value="Obturación Simple/Oclusal - Desde $21.990">Obturación Simple/Oclusal - Desde $21.990</option>
+                                <option value="Presupuesto Gratis">Presupuesto Gratis</option>
+                                <option value="Consulta General">Consulta General</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-icon">💬</span>
+                            Agendar por WhatsApp
+                        </button>
+                        <div class="loading" id="loading">Preparando tu mensaje...</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestras Ofertas Especiales</h2>
+                <p>Tratamientos profesionales con precios accesibles y atención de primera calidad</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🦷</div>
+                    <h3>Limpieza Dental Completa</h3>
+                    <span class="service-price-label">Precio Especial</span>
+                    <div class="service-price">$24.990</div>
+                    <p>Incluye destartraje, pulido, fluorización y revisión completa. Deja tus dientes brillantes y saludables.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⭐</div>
+                    <h3>Obturaciones</h3>
+                    <span class="service-price-label">Desde</span>
+                    <div class="service-price">$21.990</div>
+                    <p>Obturación simple u oclusal con materiales de alta calidad. Tratamiento sin dolor y duradero.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Presupuesto Gratis</h3>
+                    <span class="service-price-label">100% Gratis</span>
+                    <div class="service-price">$0</div>
+                    <p>Evaluación completa sin costo y presupuesto detallado de todos los tratamientos que necesites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por Qué Elegirnos?</h2>
+                <p>Más de 5,000 pacientes satisfechos confían en nosotros</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">👨‍⚕️</div>
+                    <div class="benefit-content">
+                        <h3>Profesionales Certificados</h3>
+                        <p>Equipo de dentistas con años de experiencia y actualización constante.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h3>Mejores Precios</h3>
+                        <p>Tratamientos de calidad a precios justos y accesibles para todos.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔬</div>
+                    <div class="benefit-content">
+                        <h3>Tecnología Moderna</h3>
+                        <p>Equipos de última generación para tratamientos precisos y cómodos.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-content">
+                        <h3>Atención Rápida</h3>
+                        <p>Agenda tu hora fácilmente y sin largas esperas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¡No Esperes Más!</h2>
+                <p>Agenda tu consulta hoy y aprovecha nuestras ofertas especiales. Tu sonrisa te lo agradecerá.</p>
+                <div class="cta-buttons">
+                    <a href="#contactForm" class="btn btn-white">
+                        <span class="btn-icon">📅</span>
+                        Agendar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">S y M Clínica Dental</div>
+                <div class="footer-info">
+                    <a href="tel:+56998487444">📞 +56 9 9848 7444</a>
+                    <span>Santiago, Chile</span>
+                    <span>© 2024 Todos los derechos reservados</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56998487444?text=Hola%2C%20vengo%20de%20la%20web%20y%20me%20interesa%20agendar%20una%20hora" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.823.736 5.489 2.13 7.864L.07 31.277l7.648-2.01A15.952 15.952 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.524 0-4.918-.7-6.976-1.975l-.5-.29-5.19 1.362 1.385-5.062-.319-.518A13.279 13.279 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.323-9.99c-.402-.201-2.377-1.173-2.745-1.308-.367-.134-.634-.201-.902.201-.267.403-1.038 1.308-1.272 1.576-.235.268-.469.302-.871.1-.402-.2-1.697-.626-3.233-1.994-1.195-1.065-2.001-2.38-2.236-2.783-.234-.402-.025-.62.176-.82.18-.18.402-.469.603-.703.201-.235.268-.402.402-.67.134-.268.067-.502-.033-.703-.1-.201-.902-2.176-1.237-2.981-.326-.783-.657-.677-.902-.69-.234-.012-.502-.015-.77-.015s-.703.1-1.071.502c-.368.402-1.406 1.374-1.406 3.349s1.44 3.885 1.641 4.153c.201.268 2.837 4.332 6.873 6.073.96.415 1.71.663 2.294.848.964.307 1.841.263 2.535.16.773-.116 2.377-.972 2.712-1.91.334-.939.334-1.743.234-1.91-.1-.168-.368-.268-.77-.47z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const servicio = document.getElementById('servicio').value;
+            
+            // Show loading
+            const loading = document.getElementById('loading');
+            loading.classList.add('active');
+            
+            // Create WhatsApp message
+            let mensaje = `🌟 *Nuevo contacto desde la web*\n\n`;
+            mensaje += `👤 *Nombre:* ${nombre}\n`;
+            mensaje += `📱 *Teléfono:* ${telefono}\n`;
+            if (email) {
+                mensaje += `📧 *Email:* ${email}\n`;
+            }
+            mensaje += `🦷 *Servicio de interés:* ${servicio}\n\n`;
+            mensaje += `✅ *Vengo de la web publicitada*`;
+            
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            const urlWhatsApp = `https://wa.me/56998487444?text=${mensajeCodificado}`;
+            
+                // Enviar conversión a Google Ads
+                if (window.gtag) {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17990964360/To5GCKCkvqYcEIip4YJD',
+                        'value': 1.0,
+                        'currency': 'CLP'
+                    });
+                }
+
+                // Redirect after a short delay
+            setTimeout(() => {
+                window.open(urlWhatsApp, '_blank');
+                loading.classList.remove('active');
+                // Reset form
+                document.getElementById('contactForm').reset();
+            }, 800);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleccionar TODOS los enlaces de WhatsApp (wa.me y api.whatsapp.com)
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com/send"]');
+
+            whatsappLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    // Enviar conversión a Google Ads
+                    if (window.gtag) {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-17990964360/To5GCKCkvqYcEIip4YJD',
+                            'value': 1.0,
+                            'currency': 'CLP'
+                        });
+                    }
+                    console.log('✅ Conversión de WhatsApp enviada desde INDEX.HTML');
+                });
+            });
+
+            console.log('Seguimiento configurado para ' + whatsappLinks.length + ' enlaces de WhatsApp en index.html');
+        });
+    </script>
+</body>
+</html>
