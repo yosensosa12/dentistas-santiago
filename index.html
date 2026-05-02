@@ -829,7 +829,7 @@
                 <div class="footer-info">
                     <a href="tel:+56998487444">📞 +56 9 9848 7444</a>
                     <span>Santiago, Chile</span>
-                    <span>© 2026 Todos los derechos reservados</span>
+                    <span>© 2024 Todos los derechos reservados</span>
                 </div>
             </div>
         </div>
@@ -857,14 +857,14 @@
             loading.classList.add('active');
             
             // Create WhatsApp message
-            let mensaje = `🌟 *Nuevo contacto desde la web*\n\n`;
-            mensaje += `👤 *Nombre:* ${nombre}\n`;
-            mensaje += `📱 *Teléfono:* ${telefono}\n`;
+            let mensaje = `*Nuevo contacto desde la web*\n\n`;
+            mensaje += `*Nombre:* ${nombre}\n`;
+            mensaje += `*Telefono:* ${telefono}\n`;
             if (email) {
-                mensaje += `📧 *Email:* ${email}\n`;
+                mensaje += `*Email:* ${email}\n`;
             }
-            mensaje += `🦷 *Servicio de interés:* ${servicio}\n\n`;
-            mensaje += `✅ *Vengo de la web publicitada*`;
+            mensaje += `*Servicio de interes:* ${servicio}\n\n`;
+            mensaje += `Vengo de la web publicitada`;
             
             const mensajeCodificado = encodeURIComponent(mensaje);
             const urlWhatsApp = `https://wa.me/56998487444?text=${mensajeCodificado}`;
